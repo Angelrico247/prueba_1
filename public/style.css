@@ -1,0 +1,11 @@
+
+.form{
+width: 350px;
+border: 1px solid rgba(128, 128, 128, 0.148);
+border-radius: 15px;
+box-shadow: 1px 1px 2px #717171;
+}
+
+.text{
+    text-align: center;
+}
