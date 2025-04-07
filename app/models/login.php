@@ -31,9 +31,9 @@ class User
         $stmt->bindValue("username", $username);
         $stmt->execute();
 
-        $cliente = $stmt->fetch(PDO::FETCH_ASSOC);
-        if ($cliente) {
-            if (password_verify($password, $cliente['password'])) {
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        if ($user) {
+            if (password_verify($password, $user['password'])) {
                 session_start();
                 $_SESSION['username'] = $username;
                 return true;
