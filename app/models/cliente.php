@@ -15,6 +15,9 @@ class Cliente
 
     public function createClient(string $nombre, string $apellido, string $domicilio, string $email): bool
     {
+  
+
+        try {
         $query = "INSERT INTO clientes (nombre, apellido, domicilio, email) VALUES (:nombre, :apellido, :domicilio, :email)";
         $stmt = $this->conn->prepare($query);
         $stmt->bindValue("nombre", $nombre);
