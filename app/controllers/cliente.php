@@ -13,7 +13,6 @@ require_once "../models/cliente.php";
 
 $method = $_SERVER['REQUEST_METHOD'];
 $cliente = new Cliente();
-
 $data = json_decode(file_get_contents('php://input'), true);
 
 switch ($method) {
