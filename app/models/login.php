@@ -37,7 +37,6 @@ class User
                 session_start();
                 $_SESSION['username'] = $username;
                 return true;
-                exit();
             }else{
                 return false;
             }
