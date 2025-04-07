@@ -19,6 +19,7 @@ switch ($method) {
     case 'POST':
         if (!$data || empty($data['nombre']) ||empty ($data['apellido']) || empty($data['domicilio']) || empty($data['email'])) {
             echo json_encode("Datos faltantes");
+            exit();
         }
 
 
