@@ -23,7 +23,7 @@ class Cliente
         $stmt->bindValue("nombre", $nombre);
         $stmt->bindValue("apellido", $apellido);
         $stmt->bindValue("domicilio", $domicilio);
-        $stmt->bindValue("email", $nombre);
+            $stmt->bindValue("email", $email);
         return $stmt->execute();
     }
 
