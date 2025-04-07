@@ -69,7 +69,7 @@ switch ($method) {
 
     case 'PUT':
 
-        if (!$data || empty($data['id']) || empty($data['nombre'] || $data['apellido'] || $data['domicilio'] || $data['email'])) {
+        if (!$data || empty($data['id']) || empty($data['nombre']) ||empty ($data['apellido']) || empty($data['domicilio']) || empty($data['email'])) {
             echo json_encode("Datos faltantes");
         }
 
