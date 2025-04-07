@@ -3,7 +3,7 @@
 require_once "../../config/database.php";
 require_once "../../config/auth.php";
 
-class Cliente
+class Client
 {
     private PDO $conn;
 
@@ -18,13 +18,13 @@ class Cliente
   
 
         try {
-        $query = "INSERT INTO clientes (nombre, apellido, domicilio, email) VALUES (:nombre, :apellido, :domicilio, :email)";
-        $stmt = $this->conn->prepare($query);
-        $stmt->bindValue("nombre", $nombre);
-        $stmt->bindValue("apellido", $apellido);
-        $stmt->bindValue("domicilio", $domicilio);
+            $query = "INSERT INTO clientes (nombre, apellido, domicilio, email) VALUES (:nombre, :apellido, :domicilio, :email)";
+            $stmt = $this->conn->prepare($query);
+            $stmt->bindValue("nombre", $nombre);
+            $stmt->bindValue("apellido", $apellido);
+            $stmt->bindValue("domicilio", $domicilio);
             $stmt->bindValue("email", $email);
-        return $stmt->execute();
+            return $stmt->execute();
         } catch (Exception $e) {
             
             die("Error: ". $e->getMessage());
