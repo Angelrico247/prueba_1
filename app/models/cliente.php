@@ -25,6 +25,10 @@ class Cliente
         $stmt->bindValue("domicilio", $domicilio);
             $stmt->bindValue("email", $email);
         return $stmt->execute();
+        } catch (Exception $e) {
+            
+            die("Error: ". $e->getMessage());
+        }
     }
 
 
