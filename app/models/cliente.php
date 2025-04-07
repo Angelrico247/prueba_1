@@ -5,7 +5,7 @@ require_once "../../config/auth.php";
 
 class Cliente
 {
-    private $conn;
+    private PDO $conn;
 
     public function __construct()
     {
